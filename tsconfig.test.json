@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.server.json",
+  "compilerOptions": { "outDir": ".test-build", "sourceMap": false },
+  "include": ["server", "shared", "tests"]
+}

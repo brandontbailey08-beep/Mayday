@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#182635" />
+    <meta
+      name="description"
+      content="One aircraft. Two stations. No room for silence. An asymmetric cooperative aviation disaster game."
+    />
+    <title>MAYDAY — Flight 404</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <canvas id="world" aria-label="Live 3D view of Flight 404"></canvas>
+    <div class="scene-shade"></div>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Mayday home"
+        ><span class="brand-icon">✳</span> MAYDAY
+        <span class="brand-divider"></span
+        ><span class="brand-sub">FLIGHT 404</span></a
+      >
+      <div class="connection">
+        <span id="connection-dot" class="dot"></span
+        ><span id="connection">CONTACTING TOWER</span>
+      </div>
+    </header>
+    <main id="app"></main>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <footer>
+      <span>COOPERATIVE FLIGHT OPERATIONS</span
+      ><span id="footer-right"
+        >PROTOTYPE 0.4 &nbsp; / &nbsp; ORTHO SCENERY</span
+      >
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
