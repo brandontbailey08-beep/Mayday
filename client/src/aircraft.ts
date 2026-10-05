@@ -299,10 +299,12 @@ export function createAircraft(scene: Scene) {
     return [Math.sin(angle) * rx, cy - Math.cos(angle) * ry, z];
   };
   for (const side of [-1, 1]) {
+    // Two panes per side make the four-piece cockpit windshield. Keeping the
+    // glazing bands separate from the cabin texture avoids phantom windows
+    // appearing behind the cockpit when the nose is viewed from the side.
     for (const [lo, hi, back, front] of [
       [1.78, 2.23, 6.05, 6.72],
       [2.03, 2.62, 6.8, 7.36],
-      [2.67, 3.1, 7.03, 7.64],
     ]) {
       const angle = (a: number) => (side > 0 ? a : TAU - a);
       // A tessellated skin patch follows the curved nose; a flat quad would
