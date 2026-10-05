@@ -26,6 +26,12 @@ npm start
 
 Open **http://localhost:3000**. This single port serves the built client, Socket.IO, and `/health`. No separate client URL or CORS configuration is needed for normal same-origin local play.
 
+## New airframe (0.4.1)
+
+MF–404 is an original fictional narrowbody twinjet with a shaped fuselage and nose, conformal cockpit glazing, cambered swept wings, winglets, horizontal/vertical stabilizers, flap-track fairings, recessed turbofan intakes, spinning fan blades, exhausts and a blue-and-white MAYDAY livery. Cabin windows, door outlines, registration and tail artwork are locally generated textures. The exterior landing gear and landing lights follow the shared flight's gear setting; gear movement and fan/beacon animation respect reduced-motion preferences.
+
+Choose **Inspect aircraft** on the home screen, or open `/aircraft.html`, to rotate and zoom the same model in a studio view. Overview, side, front and rear presets, a gear toggle, and optional auto rotation work independently of an active flight. This preview does not create a multiplayer room or change flight controls. The aircraft is an original game model, not a licensed manufacturer replica.
+
 ## Aerial scenery (0.4)
 
 The forward cockpit and exterior view now use bundled **4096px USGS/USDA Colorado orthoimagery**, a blended **2048px airport-area detail layer**, and rolling procedural terrain. Roads, fields, towns and lakes provide ground-motion cues. Runway 27 has worn asphalt, threshold numbers and bars, touchdown markings, edge/approach lights and glide-responsive PAPI. Taxiways, an apron, terminal, hangars, tower, parked aircraft, cars, fences, trees and nearby buildings complete the airfield.

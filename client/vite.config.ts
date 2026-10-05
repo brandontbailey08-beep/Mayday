@@ -3,6 +3,12 @@ import { fileURLToPath } from "node:url";
 export default defineConfig({
   root: fileURLToPath(new URL(".", import.meta.url)),
   build: {
+    rollupOptions: {
+      input: {
+        game: fileURLToPath(new URL("./index.html", import.meta.url)),
+        aircraft: fileURLToPath(new URL("./aircraft.html", import.meta.url)),
+      },
+    },
     outDir: "../dist/client",
     emptyOutDir: true,
     chunkSizeWarningLimit: 1500,

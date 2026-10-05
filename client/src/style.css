@@ -1756,3 +1756,22 @@ input[type="range"] {
     11px/1.7 Consolas,
     monospace;
 }
+
+.inspect-aircraft {
+  display: inline-block;
+  color: #b5d4f0;
+  border: 1px solid #87acce60;
+  background: #142b40bb;
+  border-radius: 4px;
+  padding: 9px 12px;
+  margin: 8px 0 16px;
+  text-decoration: none;
+  font:
+    11px "Segoe UI",
+    sans-serif;
+  letter-spacing: 0.03em;
+}
+.inspect-aircraft:hover {
+  background: #294862;
+  color: white;
+}

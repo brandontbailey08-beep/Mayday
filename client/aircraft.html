@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101e30" />
+    <title>MF–404 · Aircraft inspection</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header>
+      <a href="/">✳ <b>MAYDAY</b><span>FLIGHT 404</span></a
+      ><a class="back" href="/">← Back to flight</a>
+    </header>
+    <main>
+      <div class="heading">
+        <span>AIRCRAFT INSPECTION</span>
+        <h1>Meet your aircraft.</h1>
+        <p>MF–404 <i> / </i> Twin-engine transport</p>
+      </div>
+      <canvas
+        id="aircraft-canvas"
+        aria-label="Interactive MF–404 aircraft model. Drag to orbit; scroll or pinch to zoom."
+      ></canvas>
+      <div id="model-status" role="status">Preparing aircraft…</div>
+      <div class="model-caption">
+        <span>01 / AIRFRAME</span>
+        <p>Built for the journey.<br />Counting on the crew.</p>
+      </div>
+      <div class="hint">DRAG TO ORBIT <i>·</i> SCROLL OR PINCH TO ZOOM</div>
+    </main>
+    <footer aria-label="Aircraft preview controls">
+      <div class="views">
+        <span>VIEW</span
+        ><button data-view="quarter" aria-pressed="true">Overview</button
+        ><button data-view="side" aria-pressed="false">Side</button
+        ><button data-view="front" aria-pressed="false">Front</button
+        ><button data-view="rear" aria-pressed="false">Rear</button>
+      </div>
+      <div class="configuration">
+        <button id="preview-gear" aria-pressed="false">
+          Landing gear <b>UP</b></button
+        ><button id="preview-orbit" aria-pressed="false">Auto rotate</button>
+      </div>
+    </footer>
+    <script type="module" src="/src/aircraft-viewer.ts"></script>
+  </body>
+</html>

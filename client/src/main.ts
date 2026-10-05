@@ -117,7 +117,7 @@ function entry() {
       <button id="learn" class="tutorial-launch">Learn to fly · Solo tutorial →</button>
       <p class="fine">Invite a friend, or add a bot in the lobby to test solo.</p>
     </div><div class="entry-meta"><span>02–08 CREW</span><span>4–6 MIN DIVERSION</span><span>PHONE + DESKTOP</span></div></section>
-    <aside class="hero-caption"><span class="tiny">LIVE AIRCRAFT PREVIEW</span><strong>MF–404</strong><span>CHICAGO → DENVER</span><div class="route-line"><i></i><span>DIVERSION IN PROGRESS</span><i></i></div></aside>`;
+    <aside class="hero-caption"><span class="tiny">LIVE AIRCRAFT PREVIEW</span><strong>MF–404</strong><a class="inspect-aircraft" href="/aircraft.html">Inspect aircraft ↗</a><span>CHICAGO → DENVER</span><div class="route-line"><i></i><span>DIVERSION IN PROGRESS</span><i></i></div></aside>`;
   const enter = async (join: boolean) => {
     const name = (
       document.getElementById("name") as HTMLInputElement

@@ -91,3 +91,9 @@ Station UI modules own their event lifetimes. A fixed cockpit keeps MCP, PFD and
 USGS Imagery Only JPEG exports are bundled in `client/public/scenery`. The 4096px regional map repeats over a height field; the 2048px local image uses an opacity feather and matched Web Mercator UV registration. A failed regional image falls back to procedural grass, and the detail mesh appears only after its image loads. Terrain heights are decorative; the playable approach corridor stays flat. The server owns all flight and touchdown decisions.
 
 Airport surface textures are generated once on local canvases. Static airport and vegetation meshes are merged by material; four PAPI lamps remain individually colored from the shared glide-altitude function. There is no map API key, streaming tile service or imagery request outside the game host. Canvas rendering is skipped for hidden documents and the engineer workspace. Browser HTTP caching reuses the images between sessions.
+
+## Aircraft model and inspection (0.4.1)
+
+`client/src/aircraft.ts` owns the reusable procedural airframe. Cross-section lofts form the fuselage and hollow nacelles; airfoil sections form the wings. Tessellated cockpit skin patches follow the nose curvature. A locally generated livery texture carries the windows, doors and lettering on both sides. Static parts are merged by material, with separate engine fan and gear transforms for animation.
+
+`scene.ts` passes the public gear and speed values into the visual model; it does not alter server state. The game still hides the exterior model from the pilot's forward view. `aircraft.html` and `aircraft-viewer.ts` provide a separate inspection page with an orbit camera and studio shadows. Vite builds both HTML entry points and shares the Babylon/model code between them. The inspection page has no Socket.IO connection; its gear switch is a local model preview. The viewer disposes its rendering engine when leaving the page.

@@ -1,6 +1,6 @@
 # Validation — cockpit and aerial scenery
 
-Validated on Windows, October 4, 2026. Prototype 0.4, protocol v4.
+Validated on Windows, October 4, 2026. Prototype 0.4.1, protocol v4.
 
 ## Automated checks
 
@@ -28,6 +28,15 @@ Validated on Windows, October 4, 2026. Prototype 0.4, protocol v4.
 - Corrected terrain face winding after the first visual check, then checked the textured surface from above in the cockpit. Matched the detail image to the regional image using their projected source extents. A close approach exposed clamped dynamic texture coordinates; explicit wrapping and runway UV offset now keep centerlines, numbers, mown stripes and slab textures visible.
 - Both bundled images and the attribution document return HTTP 200 with the expected JPEG/Markdown content types from the local production server. The regional image is 5,977,085 bytes and the detail image 987,417 bytes. The browser renders a procedural surface while the regional image is loading.
 - Phone testing uses a desktop browser viewport; physical mobile GPU performance, slow-network timing and long-running frame-rate benchmarks have not been measured.
+
+## Aircraft rebuild (0.4.1)
+
+- Production client/server build and type checks pass. All 34 gameplay tests pass after model integration; flight physics and protocol remain unchanged.
+- Inspected the new model in the actual home-page environment, plus the dedicated inspection page's overview, side, front and rear views. Checked hollow intakes, visible fan blades, tail surfaces, blue/white livery, cabin windows, gear-down struts/wheels and animated gear retraction.
+- Replaced flat windshield quads with curved surface patches after the first preview showed clipping against the nose. Rounded the nose profile and retained the fictional twinjet's own livery.
+- Viewer controls include orbit/zoom, camera presets, optional rotation and gear preview. The 390×844 phone viewport has no horizontal document overflow. Rendering pauses in hidden tabs; reduced motion stops automatic fan/beacon animation and makes gear changes immediate.
+- Vite now builds both index.html and aircraft.html; the common model is shared between the game and inspection page. The inspection page does not create a flight or connect to multiplayer.
+- Browser checks reported no errors or warnings. Physical phone GPU performance is not benchmarked.
 
 ## Hosting
 
